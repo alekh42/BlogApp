@@ -6,7 +6,8 @@ express        = require("express"),
 app            = express();
 
 // APP CONFIG
-mongoose.connect("mongodb://localhost/restful_blog_app",{useNewUrlParser: true, useUnifiedTopology: true});
+// mongoose.connect("mongodb://localhost/restful_blog_app",{useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://aryan:5R7U2Ha493HSnVM@cluster0.w0r2d.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser:true, useUnifiedTopology: true, useCreateIndex:true});
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
